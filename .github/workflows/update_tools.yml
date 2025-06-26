@@ -3,8 +3,11 @@ name: Update Modification Tools
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"  # Run daily at midnight
+    - cron: "0 0 * * *" # Run daily at midnight
 
+permissions:
+  contents: write
+  
 jobs:
   update-tools:
     runs-on: ubuntu-latest
